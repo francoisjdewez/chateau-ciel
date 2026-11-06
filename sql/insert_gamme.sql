@@ -1,0 +1,4 @@
+INSERT INTO gammes (nom)
+VALUES
+('ESPACE'),
+('SAFARI');

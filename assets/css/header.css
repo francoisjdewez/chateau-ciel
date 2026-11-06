@@ -1,0 +1,202 @@
+/* HEADER */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid red; */
+    gap: 200px;
+    font-optical-sizing: auto;
+    background: linear-gradient(
+    135deg,
+    #0B1F3A 0%,
+    #123C73 45%,
+    #1E5EFF 100%
+    );
+    /* border: 4px solid black; */
+    
+}
+
+header div {
+    align-items: stretch;
+    /* border: 1px solid black; */
+}
+
+
+.logo img {
+
+    width: 14rem;
+}
+
+
+
+
+
+/* header > div {
+
+    border: 3px solid blue;
+} */
+
+.header-nav {
+    padding: 0px;
+    font-size: 23px;
+    list-style: none;
+    letter-spacing: 1px;
+    gap: 100px;
+    display: flex;
+    font-weight: bold;
+    /* border: 1px solid black; */
+}
+
+
+.trans-color a {
+    color: white;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.trans-color a:hover {
+    color: black;
+}
+
+.trans-color i{
+    transition: color 0.3s;
+}
+
+.trans-color i:hover {
+    transition: color 0.3s;
+    color: black;
+}
+
+.trans-bg-color{
+    transition: background-color 0.3s;
+}
+
+.trans-bg-color:hover {
+    background-color: #0173be
+}
+
+
+.header-bouton {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.header-bouton i{
+    color:white;
+    font-size: 25px;
+}
+
+
+.header-dasboard a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+/* Nombre d'articles posé sur l'icône du panier */
+.lien-panier {
+    position: relative;
+}
+
+.panier-compteur {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 4px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #0B1F3A;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+    /* écrans moyens : on réduit les espaces pour que tout tienne sur une ligne */
+    header { gap: 40px; }
+    .header-nav { font-size: 18px; gap: 40px; }
+}
+
+
+@media (max-width: 992px) {
+    /* tablette + petits laptops */
+
+    header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 3px solid red; */
+    gap: 50px;
+    }
+
+
+    .header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    gap: 40px;
+    
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+    /* mobile global */
+
+    header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 3px solid red; */
+    gap: 50px;
+    }
+
+
+    .header-nav {
+    font-size: 15px;
+    gap: 40px;
+    
+    }
+
+
+}
+
+/* Le menu reste sur une ligne par élément */
+.header-nav a { white-space: nowrap; }
+
+/* Ordinateur : les espaces s'adaptent pour que tout reste visible, prénom compris */
+@media (min-width: 993px) {
+    header { gap: clamp(24px, 4vw, 200px); padding-inline: 16px; }
+    .header-nav { gap: clamp(24px, 3.5vw, 100px); }
+    .logo { flex-shrink: 0; }
+    .logo img { width: clamp(9rem, 12vw, 14rem); display: block; }
+}
+
+@media (max-width: 360px) {
+    .header-nav { gap: 8px 16px; font-size: 14px; }
+}
+
+/* Tablette et téléphone : un en-tête compact, le menu en ligne */
+@media (max-width: 992px) {
+    header { flex-direction: row; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; padding: 10px 16px; }
+    .logo img { width: 7rem; display: block; }
+    .header-bouton { margin-left: auto; }
+    .header-menu { order: 3; width: 100%; }
+    .header-dasboard a { font-size: 1rem; }
+    .header-nav { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 8px 24px; margin: 0; font-size: 15px; }
+}

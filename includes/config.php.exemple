@@ -1,0 +1,8 @@
+<?php
+// MODELE : a copier en "config.php" (sans ".exemple") sur le serveur en ligne.
+// Le vrai fichier config.php contient des identifiants : il ne doit jamais etre envoye sur GitHub.
+
+$host = "adresse-du-serveur-mysql";
+$user = "utilisateur";
+$password = "change-moi";
+$database = "nom-de-la-base";
